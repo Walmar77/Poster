@@ -5,22 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "artist".
  *
  * @property integer $id
  * @property string $name
- * @property string $email
- * @property string $password
- * @property integer $isAdmin
+ * @property string $surname
  */
-class User extends \yii\db\ActiveRecord
+class Artist extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'user';
+        return 'artist';
     }
 
     /**
@@ -29,8 +27,7 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['isAdmin'], 'integer'],
-            [['name', 'email', 'password'], 'string', 'max' => 255],
+            [['name', 'surname'], 'string', 'max' => 255],
         ];
     }
 
@@ -42,9 +39,7 @@ class User extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'email' => 'Email',
-            'password' => 'Password',
-            'isAdmin' => 'Is Admin',
+            'surname' => 'Surname',
         ];
     }
 }
