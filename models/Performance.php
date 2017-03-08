@@ -28,6 +28,8 @@ class Performance extends \yii\db\ActiveRecord
     {
         return [
             [['date'], 'safe'],
+            [['date'], 'date', 'format' => 'php:Y-m-d'],
+            [['date'], 'default', 'value' => date('Y-m-d')],
             [['name'], 'string', 'max' => 255],
         ];
     }

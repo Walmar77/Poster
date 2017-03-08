@@ -27,6 +27,7 @@ class Artist extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['name'], 'required'],
             [['name', 'surname'], 'string', 'max' => 255],
         ];
     }
