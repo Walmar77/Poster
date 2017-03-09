@@ -2,7 +2,8 @@
 
 namespace app\modules\admin;
 
-use yii\behaviors\AccessControl;
+use Yii;
+use yii\filters\AccessControl;
 
 /**
  * admin module definition class
